@@ -152,11 +152,11 @@ client.on("message", message => {
     if (!room) return message.channel.send("Please Type The Channel Name");
     if (!findroom)
       return message.channel.send(
-        "<a:632427371730960414:647116550662258708> Cant Find This Channel"
+        " Cant Find This Channel"
       );
     let embed = new Discord.RichEmbed()
       .setTitle(
-        "**<a:yes:647115725084819456> Done The Welcome Code Has Been Setup**"
+        "** Done The Welcome Code Has Been Setup**"
       )
       .addField("Channel:", `${room}`)
       .addField("Requested By:", `${message.author}`)
@@ -196,14 +196,14 @@ client.on("message", message => {
     if (welcome[message.guild.id].leave === "Off")
       return [
         message.channel.send(
-          `**<a:on:642500266985259018> The Leave Msg Is __𝐎𝐍__ ! <a:on:642500266985259018>**`
+          `** The Leave Msg Is __𝐎𝐍__ !**`
         ),
         (welcome[message.guild.id].leave = "On")
       ];
     if (welcome[message.guild.id].leave === "On")
       return [
         message.channel.send(
-          `**<a:off:642500290171502602> The Leave Msg Is __𝐎𝐅𝐅__ ! <a:off:642500290171502602>**`
+          `**The Leave Msg Is __𝐎𝐅𝐅__ ! **`
         ),
         (welcome[message.guild.id].leave = "Off")
       ];
@@ -234,14 +234,14 @@ client.on("message", message => {
     if (welcome[message.guild.id].onff === "Off")
       return [
         message.channel.send(
-          `**<a:on:642500266985259018> The Welcome Is __𝐎𝐍__ ! <a:on:642500266985259018>**`
+          `**The Welcome Is __𝐎𝐍__ ! **`
         ),
         (welcome[message.guild.id].onoff = "On")
       ];
     if (welcome[message.guild.id].onoff === "On")
       return [
         message.channel.send(
-          `**<a:off:642500290171502602> The Welcome Is __𝐎𝐅𝐅__ ! <a:off:642500290171502602>**`
+          `**The Welcome Is __𝐎𝐅𝐅__ ! **`
         ),
         (welcome[message.guild.id].onoff = "Off")
       ];
@@ -273,14 +273,14 @@ client.on("message", message => {
     if (welcome[message.guild.id].dm === "Off")
       return [
         message.channel.send(
-          `**<a:on:642500266985259018> The Welcome Dm Is __𝐎𝐍__ ! <a:on:642500266985259018>**`
+          `**The Welcome Dm Is __𝐎𝐍__ !**`
         ),
         (welcome[message.guild.id].dm = "On")
       ];
     if (welcome[message.guild.id].dm === "On")
       return [
         message.channel.send(
-          `**<a:off:642500290171502602> The Welcome Dm Is __𝐎𝐅𝐅__ ! <a:off:642500290171502602>**`
+          `**The Welcome Dm Is __𝐎𝐅𝐅__ !**`
         ),
         (welcome[message.guild.id].dm = "Off")
       ];
@@ -312,14 +312,14 @@ client.on("message", message => {
     if (welcome[message.guild.id].by === "Off")
       return [
         message.channel.send(
-          `**<a:on:642500266985259018> The Invited By Is __𝐎𝐍__ ! <a:on:642500266985259018>**`
+          `** The Invited By Is __𝐎𝐍__ !**`
         ),
         (welcome[message.guild.id].by = "On")
       ];
     if (welcome[message.guild.id].by === "On")
       return [
         message.channel.send(
-          `**<a:off:642500290171502602> The Invited By Is __𝐎𝐅𝐅__ ! <a:off:642500290171502602>**`
+          `**The Invited By Is __𝐎𝐅𝐅__ !**`
         ),
         (welcome[message.guild.id].by = "Off")
       ];
@@ -420,8 +420,8 @@ client.on("guildMemberAdd", async member => {
       );
       if (!c) return;
       c.sendFile(canvas.toBuffer());
-      c.send("**__W__elcome ~~T~~o** " + `**${member.guild.name}**` +   "<:3_:671822564540284965> <:CC__:604702917747933258>")
-      c.send("<a:4577:594276367525216276> **  User : **" + `${member}` + "..");
+      c.send(`**__W__elcome ~~T~~o** **${member.guild.name}**`)
+      c.send("**  User : **" + `${member}` + "..");
       fs.writeFile(
         "./welcomer.json",
         JSON.stringify(welcome),
@@ -467,7 +467,7 @@ client.on("guildMemberAdd", member => {
     );
     if (!logChannel) return;
     setTimeout(() => {
-      logChannel.send(`**<a:22:658677402515406849> Invited By: <@${inviter.id}> <a:33:658677438464917543>**
+      logChannel.send(`**Invited By: <@${inviter.id}>**
 
 
 `);
